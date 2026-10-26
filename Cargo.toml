@@ -1,0 +1,17 @@
+[package]
+name = "sigmaos-audio"
+version = "0.1.0"
+edition = "2021"
+authors = ["SigmaOS Project"]
+description = "Audio subsystem and management"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-audio"
+readme = "README.md"
+keywords = ["audio", "sound", "pipewire"]
+categories = ["multimedia"]
+
+[dependencies]
+sigmaos-kernel = { version = "0.1", path = "../SigmaOS-kernel" }
+
+[profile.release]
+opt-level = 3
