@@ -7,6 +7,8 @@ license = "MIT"
 repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-audio"
 
 [dependencies]
+toml = "0.8"
+thiserror = "1.0"
 tokio = { version = "1.35", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 log = "0.4"
