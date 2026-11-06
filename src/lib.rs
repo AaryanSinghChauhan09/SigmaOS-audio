@@ -1,12 +1,17 @@
-use anyhow::Result;
-use serde::Serialize;
+//! SigmaOS-audio — audio subsystem model.
+//!
+//! Models ALSA, PipeWire, and PulseAudio-style audio graphs:
+//! devices, streams, nodes, graphs, and audio processing.
+//! Deterministic and std-only (no actual hardware access).
 
-#[derive(Debug, Clone, Serialize)]
-pub struct Config { pub enabled: bool }
-impl Default for Config { fn default() -> Self { Self { enabled: true } } }
+pub mod alsa;
+pub mod pipewire;
+pub mod pulse;
+pub mod device;
+pub mod stream;
 
-pub struct audio { config: Config }
-impl audio {
-    pub fn new(config: Config) -> Self { Self { config } }
-    pub fn initialize(&mut self) -> Result<()> { Ok(()) }
-}
+pub use alsa::{AlsaDevice, AlsaPcm, AlsaMixer};
+pub use pipewire::{AudioNode, AudioGraph, Link};
+pub use pulse::{PulseSink, PulseSource, PulseServer};
+pub use device::{AudioDevice, DeviceState};
+pub use stream::{AudioStream, StreamParams};
