@@ -1,6 +1,6 @@
 [component]
 name = "SigmaOS-audio"
-description = "PipeWire/WirePlumber integration and device policy"
+description = "An evolving Rust audio library exposing AudioManager and modules for audio graphs, codec and driver abstractions, ALSA/PipeWire related types, podcast data, editing effects, and audio routing."
 version = "0.1.0"
 tier = 3
 
