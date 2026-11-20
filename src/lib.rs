@@ -9,6 +9,7 @@ pub mod pipewire;
 pub mod pulse;
 pub mod device;
 pub mod stream;
+pub mod sigmaaudioconfig;
 
 pub use alsa::{AlsaDevice, AlsaPcm, AlsaMixer};
 pub use pipewire::{AudioNode, AudioGraph, Link};
